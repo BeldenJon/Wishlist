@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemsRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/addItemName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:ems="14"
+        android:hint="Item Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/addItemLink"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/addItemLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="21"
+        android:hint="ex: https://www.amazon.com/Android-Studio-Chipmunk-Essentials-Developing/dp/1951442458/"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/addItemBTN"
+        app:layout_constraintEnd_toStartOf="@+id/addItemBTN"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/addItemName"
+        app:layout_constraintTop_toTopOf="@+id/addItemBTN" />
+
+    <EditText
+        android:id="@+id/addItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:ems="5"
+        android:hint="ex: 5.99"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/addItemName"
+        app:layout_constraintEnd_toEndOf="@+id/addItemBTN"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/addItemBTN"
+        app:layout_constraintTop_toTopOf="@+id/addItemName" />
+
+    <Button
+        android:id="@+id/addItemBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:text="SUBMIT"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
